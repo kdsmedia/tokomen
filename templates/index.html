@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Comment Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>TikTok Comment Bot</h1>
+        <form action="/generate" method="post">
+            <button type="submit" class="btn btn-generate">Generate 50 Fake Accounts</button>
+        </form>
+        <form action="/start" method="post">
+            <input type="text" name="url" placeholder="Enter TikTok video URL" required>
+            <button type="submit" class="btn btn-start">Start Sending Comments</button>
+        </form>
+    </div>
+</body>
+</html>
