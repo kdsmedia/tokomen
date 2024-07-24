@@ -23,5 +23,14 @@ def generate():
     fake_accounts = [generate_random_name() for _ in range(num_accounts)]
     return jsonify({'accounts': fake_accounts})
 
+@app.route('/start', methods=['GET'])
+def start_comments():
+    url = request.args.get('url')
+    if not url:
+        return jsonify({'error': 'URL is required'}), 400
+    
+    # Here, you would handle the logic for starting the comment process
+    return jsonify({'status': 'Comments have been sent!'})
+
 if __name__ == '__main__':
     app.run(debug=True)
